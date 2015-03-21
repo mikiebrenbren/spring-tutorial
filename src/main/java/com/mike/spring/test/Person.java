@@ -33,6 +33,19 @@ public class Person {
         this.address = address;
     }
 
+    public void onCreate(){
+        System.out.println("Person createed " + this);
+    }
+
+    public void onDestroy(){
+        System.out.println("Person destroyed.");
+    }
+
+    public static Person getInstance(){
+        System.out.println("Creating a person instance");
+        return new Person("1234", "Bob");
+    }
+
     @Override
     public String toString() {
         return "Person{" +

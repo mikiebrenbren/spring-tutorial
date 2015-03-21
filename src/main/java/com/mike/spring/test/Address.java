@@ -13,6 +13,14 @@ public class Address {
         this.postcode = postcode;
     }
 
+    public void init(){
+        System.out.println("Bean created " + this);
+    }
+
+    public void destroy(){
+        System.out.println("Bean destroy " + this);
+    }
+
     @Override
     public String toString() {
         return "Address{" +
