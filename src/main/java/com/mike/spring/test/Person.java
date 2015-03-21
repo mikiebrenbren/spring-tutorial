@@ -41,9 +41,9 @@ public class Person {
         System.out.println("Person destroyed.");
     }
 
-    public static Person getInstance(){
+    public static Person getInstance(String id, String name){
         System.out.println("Creating a person instance");
-        return new Person("1234", "Bob");
+        return new Person(id, name);
     }
 
     @Override
