@@ -42,6 +42,60 @@
 
     </bean>
 
+    <bean id="basket" class="com.mike.spring.test.fruit.FruitBasket" >
+        <constructor-arg value="Mikes Basket"></constructor-arg>
+        <constructor-arg>
+            <list>
+                <value>apple</value>
+                <value>pear</value>
+                <value>pineapple</value>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean id="jungle" class="com.mike.spring.test.animal.Jungle">
+        <property name="largest" ref="elephant"></property>
+        <property name="animals">
+            <list>
+                <ref bean="snake"/>
+                <ref bean="lion"/>
+                <ref bean="elephant"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="lion" class="com.mike.spring.test.animal.Animal"
+            p:name="Mike"
+            p:type="Lion">
+    </bean>
+    <bean id="elephant" class="com.mike.spring.test.animal.Animal"
+          p:name="Susy"
+          p:type="Elephant">
+    </bean>
+    <bean id="snake" class="com.mike.spring.test.animal.Animal"
+          p:name="Slither"
+          p:type="Snake">
+    </bean>
+
+    <bean id="jungle2" class="com.mike.spring.test.animal.Jungle" >
+        <property name="foods">
+            <props>
+                <prop key="gorrilla">bannana</prop>
+                <prop key="panda">bamboo</prop>
+                <prop key="snake">eggs</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="jungle3" class="com.mike.spring.test.animal.Jungle" >
+    <property name="animalMap">
+        <map>
+            <entry key="lion" value-ref="lion"></entry>
+            <entry key="snake" value-ref="snake"></entry>
+            <entry key="elephant" value-ref="elephant"></entry>
+        </map>
+    </property>
+    </bean>
 
 
 </beans>

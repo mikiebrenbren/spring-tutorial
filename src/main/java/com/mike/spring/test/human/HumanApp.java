@@ -1,4 +1,4 @@
-package com.mike.spring.test;
+package com.mike.spring.test.human;
 
 import com.mike.spring.test.human.Address;
 import com.mike.spring.test.human.Person;
@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * Created by michaelbrennan on 3/19/15.
  */
-public class App {
+public class HumanApp {
 
     public static void main(String[]args){
         
