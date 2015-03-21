@@ -1,4 +1,4 @@
-package com.mike.spring.test;
+package com.mike.spring.test.human;
 
 /**
  * Created by michael.brennan on 3/20/15.

@@ -7,7 +7,7 @@
         default-init-method="init">
 
     <!--Singleton bean that is mapped to the person class, uses properties to create person and arguement tags, has onCreate method and onDestroy method each method is self documenting-->
-    <bean id="person" class="com.mike.spring.test.Person" scope="singleton"
+    <bean id="person" class="com.mike.spring.test.human.Person" scope="singleton"
           init-method="onCreate" destroy-method="onDestroy" factory-method="getInstance">
         <constructor-arg type="java.lang.String" name="id" value="777"></constructor-arg>
         <constructor-arg type="java.lang.String" name= "name" value="Mary"></constructor-arg>
@@ -18,11 +18,11 @@
     </bean>
 
     <!--Another bean-->
-    <bean id="personfactory" class="com.mike.spring.test.PersonFactory" >
+    <bean id="personfactory" class="com.mike.spring.test.human.PersonFactory" >
 
     </bean>
     <!--This is a factory bean, it calls the factory-method inside of the specified personfactory-->
-    <bean id="person2" class="com.mike.spring.test.Person" scope="singleton"
+    <bean id="person2" class="com.mike.spring.test.human.Person" scope="singleton"
           init-method="onCreate" destroy-method="onDestroy" factory-method="createPerson" factory-bean="personfactory">
         <constructor-arg type="java.lang.String" name="id" value="654"></constructor-arg>
         <constructor-arg type="java.lang.String" name= "name" value="Mike"></constructor-arg>
@@ -33,12 +33,12 @@
     </bean>
 
     <!--this is an dress bean -->
-    <bean id="address" class="com.mike.spring.test.Address">
+    <bean id="address" class="com.mike.spring.test.human.Address">
         <constructor-arg type="java.lang.String" name="street" value="Barneys Ave"></constructor-arg>
         <constructor-arg type="java.lang.String" name="postcode" value="92278"></constructor-arg>
     </bean>
     <!--//setting properties with p syntax-->
-    <bean id="address2" class="com.mike.spring.test.Address" p:street="23 Vinyard Lane" p:postcode="8769">
+    <bean id="address2" class="com.mike.spring.test.human.Address" p:street="23 Vinyard Lane" p:postcode="8769">
 
     </bean>
 

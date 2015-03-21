@@ -1,6 +1,4 @@
-package com.mike.spring.test;
-
-import org.springframework.context.ApplicationContext;
+package com.mike.spring.test.human;
 
 /**
  * Created by michaelbrennan on 3/19/15.
